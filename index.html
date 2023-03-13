@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title> Formulário | Projeto</title>
+   <style>
+      body{
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        background-image: linear-gradient(to right, rgb(138, 4, 196), rgb(196, 97, 5));
+      }
+        .container{
+        color: rgb(255, 255, 255);
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform:translate(-50%,-50%);
+        background: rgba(0, 0, 0, 0.98);
+        padding: 15px;
+        border-radius: 15px;
+        width: 20%;
+        }
+
+        fieldset{
+        border: 5px solid rgb(196, 97, 5);
+        border-radius: 8px;   
+        }
+        legend{
+        border: 1px solid  rgb(255, 255, 255);
+        padding: 15px;  
+        text-align:center;
+        color: white;
+        background-image: linear-gradient(to right, rgb(138, 4, 196), rgb(196, 97, 5));
+        border-radius: 8px;
+        }
+
+        .formgroup{
+        position: relative;
+        }
+
+        .form-control{
+        background: none;
+        border: none;
+        border-bottom: 1px solid rgb(255, 255, 255);
+        outline: none;
+        color: rgb(255, 255, 255);
+        font-size: 14px;
+        width: 100%;
+        letter-spacing: 3px; 
+        }
+
+        .labelinput{
+        position:absolute;
+        top: 0px;
+        left: 0px;
+        pointer-events: none;
+        transition: 0.5s;
+        font-size: 18px;
+        }
+
+        .form-control:focus ~ .labelinput,
+        .form-control:valid ~ .labelinput{
+        top: -20px;
+        font-size: 12px;
+        color:rgb(190, 109, 4); 
+        }
+
+        #submit{
+        background-image: linear-gradient(to right, rgb(138, 4, 196), rgb(196, 97, 5));
+        width: 100%;
+        border-radius: 10px;
+        padding: 15px;
+        color: rgb(255, 255, 255);
+        cursor: pointer;
+        }
+        #submit:hover{
+        background-image: linear-gradient(to right, rgb(76, 7, 90),rgb(223, 12, 135));
+      }
+     </style>
+  </head>
+  <body>
+      <div class="container">
+            <form>
+                <fieldset>
+                <legend><b>Formulário de Cadastro </b></legend>
+                    <br>
+                    <div class="form-group">
+                        <label for="name" class=label.input >Nome</label>
+                        <input type="text" class="form-control" maxlength="150" id="inputname">    
+                        <small>Primeiro nome e sobrenome</small>
+                    </div>
+                    <br>
+                    <div class="form-group">
+                        <label for="e-mail" class=label.input >E-mail</label>
+                        <input type="text" class="form-control" id="inputemail">
+                        <small>exemplo:teste@hotmail.com</small>
+                    </div>
+                    <br>
+                    <div class="form-group">
+                        <label for="" class=label.input >Telefone</label>
+                        <input type="text" class="form-control" maxlength="11" id="inputphone">
+                        <small> (DDD) 99999-9999</small>
+                    </div>
+                    <br>
+                    <div class="form-group">
+                        <label for="cep" class=label.input >Cep </label>
+                        <input type="text" class="form-control"  maxlength="9" id="cep" required>
+                        <small>99999-555</small>
+                    </div>
+                    <br>
+                    <div class="form-group">
+                        <label for="logradouro" class=label.input >Endereço</label>
+                        <input type="text" class="form-control" id="logradouro">
+                        <small></small>
+                    </div>
+                    <br>
+                    <div class="form-group">
+                        <label for="numero" class=label.input >Número</label>
+                        <input type="text" class="form-control"  maxlength="4"   id="inputnumero">
+                        <small></small>
+                    </div>
+                    <br>
+                    <div class="form-group">
+                        <label for="bairro" class=label.input >Bairro</label>
+                        <input type="text" class="form-control" id="bairro">
+                        <small></small>
+                    </div>
+                    <br>
+                    <div class="form-group">
+                        <label for="cidade" class=label.input >Cidade</label>
+                        <input type="text" class="form-control" id="localidade">
+                        <small></small>
+                    </div>
+                    <br>
+                    <div class="form-group">
+                        <label for="estado" class=label.input >Estado</label>
+                        <input type="text" class="form-control" id="uf">
+                        <small></small>
+                    </div>
+                    <br>
+                    <div>
+                        <input type="submit"  name="submit" id="submit">
+                    </div>
+                </fieldset>  
+            </form>
+        <div>
+        <script src="src/js/main.js"></script>  
+</html>
+
+  
